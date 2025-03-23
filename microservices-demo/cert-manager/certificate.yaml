@@ -1,14 +1,29 @@
+# apiVersion: cert-manager.io/v1
+# kind: Certificate
+# metadata:
+#   name: localhost-cert
+#   namespace: istio-ingress
+# spec:
+#   secretName: localhost-tls
+#   issuerRef:
+#     name: staging-cluster-issuer
+#     kind: ClusterIssuer
+#     group: cert-manager.io
+#   commonName: localhost
+#   dnsNames:
+#     - localhost
+
+# self signed for local development
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: localhost-cert
-  namespace: istio-ingress
+  namespace: cert-manager
 spec:
   secretName: localhost-tls
   issuerRef:
-    name: staging-cluster-issuer
+    name: self-signed
     kind: ClusterIssuer
-    group: cert-manager.io
   commonName: localhost
   dnsNames:
     - localhost
