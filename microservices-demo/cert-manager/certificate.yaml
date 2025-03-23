@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: localhost-cert
+  namespace: istio-ingress
+spec:
+  secretName: localhost-tls
+  issuerRef:
+    name: letsencrypt-http
+    kind: ClusterIssuer
+    group: cert-manager.io
+  commonName: localhost
+  dnsNames:
+    - localhost
