@@ -6,7 +6,7 @@ metadata:
 spec:
   secretName: localhost-tls
   issuerRef:
-    name: letsencrypt-http
+    name: staging-cluster-issuer
     kind: ClusterIssuer
     group: cert-manager.io
   commonName: localhost
