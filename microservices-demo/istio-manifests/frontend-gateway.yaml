@@ -53,5 +53,5 @@ spec:
       route:
         - destination:
             host: frontend
-            port:
-              number: 80
+            # port:
+            #   number: 80
